@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/project5/static/css/main.da867e01.chunk.css",
+    "main.js": "/project5/static/js/main.9d7480f4.chunk.js",
+    "main.js.map": "/project5/static/js/main.9d7480f4.chunk.js.map",
+    "runtime-main.js": "/project5/static/js/runtime-main.4dd11a09.js",
+    "runtime-main.js.map": "/project5/static/js/runtime-main.4dd11a09.js.map",
+    "static/js/2.a98cd175.chunk.js": "/project5/static/js/2.a98cd175.chunk.js",
+    "static/js/2.a98cd175.chunk.js.map": "/project5/static/js/2.a98cd175.chunk.js.map",
+    "index.html": "/project5/index.html",
+    "precache-manifest.1e7d19fc85e7592cc082b0e8f91ae2e1.js": "/project5/precache-manifest.1e7d19fc85e7592cc082b0e8f91ae2e1.js",
+    "service-worker.js": "/project5/service-worker.js",
+    "static/css/main.da867e01.chunk.css.map": "/project5/static/css/main.da867e01.chunk.css.map",
+    "static/js/2.a98cd175.chunk.js.LICENSE.txt": "/project5/static/js/2.a98cd175.chunk.js.LICENSE.txt",
+    "static/media/saxPlayer.jpg": "/project5/static/media/saxPlayer.ddccd010.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4dd11a09.js",
+    "static/js/2.a98cd175.chunk.js",
+    "static/css/main.da867e01.chunk.css",
+    "static/js/main.9d7480f4.chunk.js"
+  ]
+}
