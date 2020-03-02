@@ -10,9 +10,9 @@ class App extends Component {
   constructor() {
     super();
 
-    this.state = {
-      userChoices: [],
-    }
+    // this.state = {
+    //   userChoices: [],
+    // }
   }
 
   render() {

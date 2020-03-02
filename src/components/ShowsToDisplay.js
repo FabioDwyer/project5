@@ -4,19 +4,22 @@ import React from 'react';
 // No state needed here! FUNCTION COMPONENT
 
 function ShowsToDisplay(props) {
-    console.log(props);
+    console.log('Show results ', props.showResults);
 
     return (
         <div className='results'>
             <h2>Results for your search:</h2>
-            { props.results.map( (events) => 
+            
+            { props.showResults.map( (show, index) => 
                 {
+                    console.log(show);
                     return (
                             <ul>
-                                <li                 key={events}>
-                                <p>{events.name}</p>
-                                <p>{events.date}</p>
-                                <p>{events.venue}</p>
+                                <li key={index}>
+                                <p>{show.name}</p>
+                                <p>{show.dates.localDate}</p>
+                                <p>{show.venues}</p>
+                                <p>{show.price}</p>
                                 </li>
                             </ul>
                         )

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import ShowsToDisplay from './ShowsToDisplay';
+import ShowsToDisplay from './ShowsToDisplay';
 
 class Form extends Component {
     constructor() {
@@ -9,8 +9,10 @@ class Form extends Component {
         this.state = {
             countrySelection: "",
             genreSelection: "",
+            shows: []
         }
     }
+    
     
     handleCountryChange = (e) => {
         console.log('Selection Country has changed', e.target.value);
@@ -47,17 +49,18 @@ class Form extends Component {
                 genreId: this.state.genreSelection,
             }
         }).then((response) => {
-            console.log(response.data);
+            console.log(response.data._embedded.events);
 
             this.setState({
-                shows: response.data._embedded.events.classificationName,
+                shows: response.data._embedded.events
             })
         })
     }
 
     render() {
+        console.log(this.state);
         return (
-            <div className="result">
+            <div>
                 <form className="App-form" action="submit">
                     <div className="flexSelect">
                         <select name="country" id="country" onChange={this.handleCountryChange}>
@@ -71,19 +74,13 @@ class Form extends Component {
                             <option value="KnvZfZ7vAvE">Jazz</option>
                         </select>
                     </div>
-                    {/* <button type="submit" onClick={ (e) => this.props.fromMain(e, this.state.countrySelection, this.state.genreSelection)}>Find Shows</button> */}
                     <button type="submit" 
                     onClick={this.handleClick}
                     >Find Shows</button>
                 </form>
-
-                {/* <div className="resultsArea">
-                    {this.state.shows.map((show, index) => {
-                        return (
-                            <ShowsToDisplay />
-                        )
-                    })}
-                </div> */}
+                {
+                    this.state.shows.length === 0 ? null : <ShowsToDisplay showResults = {this.state.shows} />
+                }
             </div>
         );
     }
