@@ -9,17 +9,14 @@ function ShowsToDisplay(props) {
     return (
         <div className='results'>
             <h2>Results for your search:</h2>
-            { props.results.map( (shows) => 
+            { props.results.map( (events) => 
                 {
                     return (
                             <ul>
-                                <li key={index}
-                                key={shows.name}
-                                key={shows.date}
-                                key={shows.venue}>
-                                    <p>{shows.name}</p>
-                                    <p>{shows.date}</p>
-                                    <p>{shows.venue}</p>
+                                <li                 key={events}>
+                                <p>{events.name}</p>
+                                <p>{events.date}</p>
+                                <p>{events.venue}</p>
                                 </li>
                             </ul>
                         )
