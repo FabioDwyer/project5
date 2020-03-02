@@ -1,40 +1,73 @@
 import React, { Component } from 'react';
-import Form from './data/Form';
-import saxPlayer from '../assets/saxPlayer.jpg';
+import axios from 'axios';
+import Form from './Form';
+import ShowsToDisplay from './ShowsToDisplay';
+
 
 class Main extends Component {
     constructor() {
         super();
-
-        console.log('MainComponent is created');
+        this.state= {
+            shows: []
+        }
     }
 
     componentDidMount() {
-        console.log('MainComponent has mounted!');
+        axios({
+            url: 'https://app.ticketmaster.com/discovery/v2/events.json',
+            method: 'GET',
+            responseType: 'json',
+            params: {
+                apikey: apikey,
+                classificationName: 'music',
+                countryCode: this.state.countrySelection,
+                genreId: this.state.genreSelection,
+            }
+        }).then((response) => {
+            console.log(response.data);
+
+            this.setState({
+                shows: response.data._embedded.events.classificationName
+            })
+        })
     }
 
-    componentDidUpdate() {
-        console.log('MainComponent is updated!');
+// Function to get the user selection from the Form (childrenComponent) to to Main (parentComponent)
+    showsRequested = (e, userChoice) => {
+        e.preventDefault();
+        console.log(userChoice);
+        console.log('Which shows ', userChoice);
+        this.findShows(userChoice);
     }
 
-    componentWillUnmount() {
-        console.log('HeaderComponent is unmounted!');
-    }
+// Function to use the user selections to filter through events-music array, find the chosen shows, then narrow THAT group down to de country and genre. Then save that to state.
+findShows = (countrySelection, genreSelection) => {
+    console.log('Find the shows ', countrySelection, genreSelection);
+
+    const copyOfAllShows = [...this.state.shows];
+
+    const userShows = copyOfAllShows.filter( (show) => {
+        return show[countrySelection] === true && show[genreSelection] === true;
+    });
+    
+    console.log(userShows);
+
+    this.state({
+        selectedShows: userShows
+    }, () => {
+    });
+}
 
     render() {
-        console.log('MainComponent is being rendered..');
-
+        console.log(this.props);  
         return (
             <main className="App-main">
                 <div className="wrapper">
-                    <div class='flexContainer'>
-                        <div className="imgConatiner">
-                            <img src={saxPlayer} alt="Jazz sax player"/>
-                        </div>
-                        <div className="formContainer">
-                            <h2>Select a Country and a Musical Genre</h2>
-                            <Form />
-                        </div>
+                    <div className="formContainer">
+                        <h2>Select a Country and a Musical Genre</h2> 
+                    {/* Parent sending the function to children (form). Not the whole function, just the part necessary, showsRequested. Don't call it here, or you'll render it again in the wrong place! */}
+                    <Form fromMain={this.showsRequested} />
+                    <ShowsToDisplay results={this.state.selectedShows} />
                     </div>
                 </div>
             </main>

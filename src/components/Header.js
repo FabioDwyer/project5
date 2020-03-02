@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
 class Header extends Component {
-    constructor() {
-        super();
+    // constructor() {
+    //     super();
         
-        console.log('HeaderComponent is created');
-    }
+    //     console.log('HeaderComponent is created');
+    // }
 
 
     render() {
-        console.log('HeaderComponent is being rendered..');
+        // console.log('HeaderComponent is being rendered..');
 
         return(
             <header className="App-header">

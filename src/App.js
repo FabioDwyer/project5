@@ -6,14 +6,23 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 
 
-
 class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      userChoices: [],
+    }
+  }
+
   render() {
     return (
       <div className="App">
-        <Header />
-        <Main />
-        <Footer />
+        <div className="flexApp">
+          <Header />
+          <Main />        
+          <Footer />
+        </div>
       </div>
     );
   }
