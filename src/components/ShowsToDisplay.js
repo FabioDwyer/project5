@@ -17,9 +17,9 @@ function ShowsToDisplay(props) {
                             <ul>
                                 <li key={index}>
                                 <p>{show.name}</p>
-                                <p>{show.dates.localDate}</p>
-                                <p>{show.venues}</p>
-                                <p>{show.price}</p>
+                                <p>{show.dates}</p>
+                                {/* <p>{show.venue}</p>
+                                <p>{show.price}</p> */}
                                 </li>
                             </ul>
                         )
