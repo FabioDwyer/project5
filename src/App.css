@@ -62,14 +62,14 @@ li {
   }
 
 .flexApp {
-  height: 100vh;
-  display: flex;
+  /* height: 100vh; */
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; */
 }
 
 .App-header {
-  height: 17.5vh;
+  /* height: 17.5vh; */
   color: #61dafb;
   /* padding: 20px; */
 }
@@ -84,7 +84,8 @@ h1 {
 }
 
 .App-main {
-  height: 70vh;
+  /* height: 70vh; */
+  padding-bottom: 11.5%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 20%;
@@ -107,6 +108,19 @@ button {
   border-radius: 5px;
 }
 
+.results {
+  color: #fff;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.results img {
+  width: 450px;
+  height: auto;
+}
 
 .flexSelect {
   display: flex;
@@ -125,7 +139,7 @@ button {
 }
 
 .App-footer {
-  height: 12.5vh;
+  /* height: 12.5vh; */
   background: wheat;
   /* padding: 7px 0; */
 }

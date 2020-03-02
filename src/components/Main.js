@@ -3,13 +3,13 @@ import React, { Component } from 'react';
 import Form from './Form';
 
 class Main extends Component {
-    constructor() {
-        super();
-    }
+    // constructor() {
+    //     super();
+    // }
 
 
     render() {
-        // console.log(this.props);  
+        console.log(this.props);  
         return (
             <main className="App-main">
                 <div className="wrapper">

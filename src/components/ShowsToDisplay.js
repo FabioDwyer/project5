@@ -14,12 +14,18 @@ function ShowsToDisplay(props) {
                 {
                     console.log(show);
                     return (
-                            <ul>
+                            <ul className = "results">
                                 <li key={index}>
-                                <p>{show.name}</p>
-                                <p>{show.dates}</p>
-                                {/* <p>{show.venue}</p>
-                                <p>{show.price}</p> */}
+                                    <h2>{show.name}</h2>
+                                    <p>Date: {show.dates.start.localDate}</p> 
+                                    <p>Time: {show.dates.start.localTime}</p>
+                                    <h3>Venue: {show._embedded.venues[0].name}</h3>
+                                    <div className="imgContainer">
+                                        <img src={show.images[8].url} alt="Artist display" />
+                                    </div>
+                                    {/* <p>{show.priceRanges[0].currency}</p>  */}
+                                    {/* <p>{show.priceRanges[0].min}</p> */}
+                                    {/* <p>{show.priceRanges[0].max}</p>    */}
                                 </li>
                             </ul>
                         )

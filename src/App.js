@@ -7,23 +7,23 @@ import Footer from './components/Footer';
 
 
 class App extends Component {
-  constructor() {
-    super();
+  // constructor() {
+  //   super();
 
-    // this.state = {
-    //   userChoices: [],
-    // }
-  }
+  //   // this.state = {
+  //   //   userChoices: [],
+  //   // }
+  // }
 
   render() {
     return (
       <div className="App">
-        <div className="flexApp">
+        {/* <div className="flexApp"> */}
           <Header />
           <Main />        
           <Footer />
         </div>
-      </div>
+      // </div>
     );
   }
 }
