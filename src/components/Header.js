@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 
 class Header extends Component {
-    // constructor() {
-    //     super();
-        
-    //     console.log('HeaderComponent is created');
-    // }
-
 
     render() {
 

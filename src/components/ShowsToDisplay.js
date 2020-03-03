@@ -4,7 +4,6 @@ import React from 'react';
 // No state needed here! FUNCTION COMPONENT
 
 function ShowsToDisplay(props) {
-    // console.log('Show results ', props.showResults);
 
     return (
         <div className='resultField'>
@@ -22,14 +21,8 @@ function ShowsToDisplay(props) {
                                     <h3>Venue: {show._embedded.venues[0].name}</h3>
                                     <h4>Link to Event at Ticketmaster: </h4>
                                     <div className="links">
-                                    <a href={show.url} target="_blank">{show.url}</a> 
+                                    <a href={show.url} target="_blank">Click here for more info.</a> 
                                     </div>
-                                    {/* <div className="imgContainer">
-                                        <img src={show.images[3].url} alt="Artist display" />
-                                    </div> */}
-                                    {/* <p>{show.priceRanges[0].currency}</p>  */}
-                                    {/* <p>{show.priceRanges[0].min}</p> */}
-                                    {/* <p>{show.priceRanges[0].max}</p>    */}
                                 </li>
                         )
                     }
