@@ -3,10 +3,6 @@ import React, { Component } from 'react';
 import Form from './Form';
 
 class Main extends Component {
-    // constructor() {
-    //     super();
-    // }
-
 
     render() { 
         return (

@@ -53,6 +53,7 @@ ul {
 
 li {
     text-decoration: none;
+    padding: 2% 4% 10%;
 } 
 
 
@@ -111,13 +112,15 @@ button {
 
 .results {
   color: #fff;
-  padding: 2% 4%;
   margin-top: 5%;
-  /* background-image: none; */
+}
+
+.resultField h2 {
+  margin-bottom: 0;
 }
 
 .results h2 {
-  margin-top: 2%;
+  margin: 4% auto;
 }
 
 .imgContainer {
@@ -126,8 +129,8 @@ button {
 }
 
 .results img {
-  width: 450px;
-  /* height: auto; */
+  min-width: 450px;
+  height: auto;
 }
 
 .flexSelect {
@@ -155,6 +158,11 @@ button {
   padding: 2px 25px;
   margin-top: 7.5%;
   font-weight: bolder;
+}
+
+a {
+  color: #61dafb;
+  text-decoration: none;
 }
 
 .App-footer,
@@ -210,10 +218,6 @@ button:focus {
     width: 90%;
   }
 
-  .App-main .wrapper {
-    width: 85%;
-  }
-
   .flexSelect {
   display: block;
   }
@@ -233,6 +237,15 @@ button:focus {
 @media (max-width: 480px) {
   .App-header .wrapper {
     width: 100%;
+  }
+
+  .App-main .wrapper {
+    width: 95%;
+  }
+
+  .links {
+    font-size: 1.6rem;
+    line-height: 1.4;
   }
 
   h1 {

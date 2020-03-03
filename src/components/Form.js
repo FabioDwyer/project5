@@ -13,18 +13,15 @@ class Form extends Component {
         }
     }
     
-    
     handleCountryChange = (e) => {
-        console.log('Selection Country has changed', e.target.value);
 
         this.setState({
             countrySelection: e.target.value
-        }) 
+        })
     }
 
     handleGenreChange = (e) => {
-        console.log('Selection Genre has changed', e.target.value);
-
+        
         this.setState({
             genreSelection: e.target.value,
         })
@@ -32,12 +29,20 @@ class Form extends Component {
     
     handleClick = (e) => {
         e.preventDefault();
-        console.log('BUTTON PRESSED!');
-        
+        // Error handling:
+        this.state.genreSelection && this.state.countrySelection
+            ?
+                // axios call etc. if complete
+                this.confirmSubmit()
+            :
+                //if either is falsy, "", produce alert informing of
+                alert('Please select a Country and a Genre.')
+    }
+
+    confirmSubmit = () => {
         // Axios Call here
         const apikey = 'xJRCV569Cb2TTGYIhYRCDph0aALGV9q1';
 
-        
         axios({
             url: 'https://app.ticketmaster.com/discovery/v2/events.json' ,
             method: 'GET',
@@ -47,18 +52,18 @@ class Form extends Component {
                 classificationName: 'music',
                 countryCode: this.state.countrySelection,
                 genreId: this.state.genreSelection,
+                id: this.state.shows.id
             }
         }).then((response) => {
-            console.log(response.data._embedded.events);
 
             this.setState({
                 shows: response.data._embedded.events
             })
         })
     }
+    
 
     render() {
-        console.log(this.state);
         return (
             <div>
                 <form className="App-form" action="submit">
@@ -78,9 +83,7 @@ class Form extends Component {
                     onClick={this.handleClick}
                     >Find Shows</button>
                 </form>
-                {
-                    this.state.shows.length === 0 ? null : <ShowsToDisplay showResults = {this.state.shows} />
-                }
+                <ShowsToDisplay showResults={this.state.shows} />
             </div>
         );
     }
