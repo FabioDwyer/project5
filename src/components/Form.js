@@ -14,14 +14,12 @@ class Form extends Component {
     }
     
     handleCountryChange = (e) => {
-
         this.setState({
             countrySelection: e.target.value
         })
     }
 
-    handleGenreChange = (e) => {
-        
+    handleGenreChange = (e) => {       
         this.setState({
             genreSelection: e.target.value,
         })
@@ -62,7 +60,7 @@ class Form extends Component {
         })
     }
     
-
+    
     render() {
         return (
             <div>
