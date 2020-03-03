@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/project5/static/css/main.14b97209.chunk.css",
+    "main.css": "/project5/static/css/main.ad74b804.chunk.css",
     "main.js": "/project5/static/js/main.19f6ba08.chunk.js",
     "main.js.map": "/project5/static/js/main.19f6ba08.chunk.js.map",
     "runtime-main.js": "/project5/static/js/runtime-main.4dd11a09.js",
@@ -8,16 +8,16 @@
     "static/js/2.2a2d7e9d.chunk.js": "/project5/static/js/2.2a2d7e9d.chunk.js",
     "static/js/2.2a2d7e9d.chunk.js.map": "/project5/static/js/2.2a2d7e9d.chunk.js.map",
     "index.html": "/project5/index.html",
-    "precache-manifest.23b358fd3bd403fd4d8133f1c493dd34.js": "/project5/precache-manifest.23b358fd3bd403fd4d8133f1c493dd34.js",
+    "precache-manifest.d13d873e3909972abfa58a7fa4fdd477.js": "/project5/precache-manifest.d13d873e3909972abfa58a7fa4fdd477.js",
     "service-worker.js": "/project5/service-worker.js",
-    "static/css/main.14b97209.chunk.css.map": "/project5/static/css/main.14b97209.chunk.css.map",
+    "static/css/main.ad74b804.chunk.css.map": "/project5/static/css/main.ad74b804.chunk.css.map",
     "static/js/2.2a2d7e9d.chunk.js.LICENSE.txt": "/project5/static/js/2.2a2d7e9d.chunk.js.LICENSE.txt",
     "static/media/App.css": "/project5/static/media/jazzBrickWall.297da99f.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.4dd11a09.js",
     "static/js/2.2a2d7e9d.chunk.js",
-    "static/css/main.14b97209.chunk.css",
+    "static/css/main.ad74b804.chunk.css",
     "static/js/main.19f6ba08.chunk.js"
   ]
 }
