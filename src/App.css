@@ -62,29 +62,28 @@ li {
   }
 
 .flexApp {
-  /* height: 100vh; */
-  /* display: flex;
+  height: 100vh;
+  display: flex;
   flex-direction: column;
-  justify-content: space-between; */
+  justify-content: space-between;
 }
 
 .App-header {
-  /* height: 17.5vh; */
   color: #61dafb;
-  /* padding: 20px; */
+  padding: 20px;
 }
 
 .App-header,
-button {
+button,
+.results {
     background-color: #282c34;
 }
 
 h1 {
-  font-size: 4.5vw;
+  font-size: 5rem;
 }
 
 .App-main {
-  /* height: 70vh; */
   padding-bottom: 11.5%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -99,17 +98,25 @@ h1 {
 h2 {
   background-color: rgba(245, 222, 179, .75);
   margin: 10% auto 5%;
+  padding: 2px 15px;
   display: inline-block;
+  width: 100%;
 }
 
 h2,
 button {
-  padding: 2px 75px;
   border-radius: 5px;
 }
 
 .results {
   color: #fff;
+  padding: 2% 4%;
+  margin-top: 5%;
+  /* background-image: none; */
+}
+
+.results h2 {
+  margin-top: 2%;
 }
 
 .imgContainer {
@@ -124,23 +131,129 @@ button {
 
 .flexSelect {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.App form select {
-  width: calc(50% - 30px);
-  margin: 5px 15px;
+Form select {
+  margin-top: 5px;
+}
+
+Form select#country {
+  width: calc(50% - 5px);
+  margin-right: 5px;
+}
+
+Form select#genre {
+  width: calc(50% - 5px);
+  margin-left: 5px;
 }
 
 button {
   font-size: 3rem;
   color: wheat;
+  padding: 2px 25px;
   margin-top: 7.5%;
+  font-weight: bolder;
+}
+
+.App-footer,
+button:hover,
+button:focus {
+  color: #282c34;
+  background-color: wheat;
 }
 
 .App-footer {
-  /* height: 12.5vh; */
-  background: wheat;
-  /* padding: 7px 0; */
+  padding: 7px 0;
 }
 
+/* Media Queries */
+@media (max-width: 1025px) {
+  .App-header .wrapper {
+    width: 100%;
+  }
+
+  .App-main .wrapper {
+  width: 70%;
+  }
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  .App-main .wrapper {
+    width: 75%;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .App-header .wrapper {
+    width: 60%;
+  }
+
+  .App-main .wrapper {
+    width: 85%;
+  }
+
+  .App-footer .wrapper {
+    width: 95%;
+  }
+
+  h1 {
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 670px) {
+  .App-header .wrapper {
+    width: 90%;
+  }
+
+  .App-main .wrapper {
+    width: 85%;
+  }
+
+  .flexSelect {
+  display: block;
+  }
+  
+  Form select#country,
+  Form select#genre {
+    width: 100%;
+    text-align: center;
+  }
+
+  .App-footer .wrapper {
+    width: 75%;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .App-header .wrapper {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 3.8rem;
+    line-height: 1.2;
+    padding-bottom: 4.75%;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h4 {
+    font-size: 1.6rem;
+  }
+
+  h5 {
+    font-size: 1.3rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+}

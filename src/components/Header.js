@@ -9,11 +9,12 @@ class Header extends Component {
 
 
     render() {
-        // console.log('HeaderComponent is being rendered..');
 
         return(
             <header className="App-header">
-                <h1>Jazz and Blues Concerts Finder</h1>
+                <div className="wrapper">
+                    <h1>Jazz and Blues Concerts Finder</h1>
+                </div>
             </header>
         ); 
     }

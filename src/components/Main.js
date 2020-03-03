@@ -8,8 +8,7 @@ class Main extends Component {
     // }
 
 
-    render() {
-        console.log(this.props);  
+    render() { 
         return (
             <main className="App-main">
                 <div className="wrapper">

@@ -12,8 +12,10 @@ class Footer extends Component {
 
         return (
             <footer className="App-footer">
-                <h4>App created with React by Fabio Dwyer for Juno College, 2020. &copy;</h4>
-                <h5>API courtesy of Ticketmaster &copy; | Photo by Janine Robinson on Unsplash</h5>
+                <div className="wrapper">
+                    <h4>App created with React by Fabio Dwyer for Juno College, 2020. &copy;</h4>
+                    <h5>API courtesy of Ticketmaster &copy; | Photo by Janine Robinson on Unsplash</h5>
+                </div>
             </footer>
         );
     }
