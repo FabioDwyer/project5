@@ -62,7 +62,7 @@ li {
   }
 
 .flexApp {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -127,7 +127,7 @@ button {
 
 .results img {
   width: 450px;
-  height: auto;
+  /* height: auto; */
 }
 
 .flexSelect {
